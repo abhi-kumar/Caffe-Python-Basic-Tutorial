@@ -1,0 +1,33 @@
+name: "convLayer_example"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution_param {
+    num_output: 20
+    kernel_size: 5
+    stride: 1
+    weight_filler {
+      type: "constant"
+      value: 0.5
+    }
+    bias_filler {
+      type: "constant"
+      value: 0.2
+    }
+  }
+}

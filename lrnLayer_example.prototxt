@@ -1,0 +1,19 @@
+name: "lrnLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "lrn"
+  name: "lrn"
+  type: "LRN"
+  lrn_param{
+    local_size: 5
+    alpha: 0.0001
+    beta: 0.75
+    k: 1
+    norm_region: WITHIN_CHANNEL
+  }
+}

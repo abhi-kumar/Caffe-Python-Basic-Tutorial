@@ -1,0 +1,17 @@
+name: "poolingLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "pool"
+  name: "pool"
+  type: "Pooling"
+  pooling_param {
+    pool: MAX
+    kernel_size: 10
+    stride: 10
+  }
+}

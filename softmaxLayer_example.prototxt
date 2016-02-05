@@ -1,0 +1,15 @@
+name: "softmaxLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "softmax"
+  name: "softmax"
+  type: "Softmax"
+  softmax_param{
+    axis: 1;
+  }
+}

@@ -1,0 +1,14 @@
+name: "imageDataLayer_example"
+layer {
+ 	name: "mnist"
+  	type: "HDF5Data"
+  	top: "data"
+  	top: "label"
+  	include {
+    		phase: TRAIN
+  	}
+  	hdf5_data_param {
+    		source: "hdf5Ptr.txt"
+    		batch_size: 1
+	}
+}

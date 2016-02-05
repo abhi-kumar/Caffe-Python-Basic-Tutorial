@@ -1,0 +1,15 @@
+name: "dropoutLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "dropout"
+  name: "dropout"
+  type: "Dropout"
+  dropout_param{
+    dropout_ratio: 0.5
+  }
+}

@@ -1,0 +1,17 @@
+name: "expLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "exp"
+  name: "exp"
+  type: "Exp"
+  exp_param{
+    scale: 1
+    shift: 1
+    base: -1
+  }
+}

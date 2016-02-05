@@ -1,0 +1,18 @@
+name: "preluLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "prelu"
+  name: "prelu"
+  type: "PReLU"
+  prelu_param{
+    channel_shared: 1
+    filler {
+      type: "gaussian"
+    }
+  }
+}

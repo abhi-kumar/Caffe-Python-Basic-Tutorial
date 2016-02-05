@@ -1,0 +1,17 @@
+name: "mvnLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "mvn"
+  name: "mvn"
+  type: "MVN"
+  mvn_param{
+    across_channels: 0
+    normalize_variance: 0
+    eps: 100
+  }
+}

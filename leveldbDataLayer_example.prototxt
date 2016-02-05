@@ -1,0 +1,22 @@
+name: "imageDataLayer_example"
+layer {
+ 	name: "mnist"
+  	type: "Data"
+  	top: "data"
+  	top: "label"
+  	include {
+    		phase: TRAIN
+  	}
+  	transform_param {
+    		scale: 0.00390625
+		new_height: 28
+		new_width: 28
+		crop_size:28
+		mean_file: "mean.binaryproto"
+  	}
+  	data_param {
+    		source: "Train"
+    		batch_size: 64
+		backend: LEVELDB
+  	}
+}

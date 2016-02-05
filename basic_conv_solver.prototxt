@@ -25,3 +25,4 @@ snapshot_prefix: "net"
 
 debug_info: 1
 test_compute_loss: 1
+

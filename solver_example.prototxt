@@ -1,0 +1,31 @@
+average_loss: 1
+random_seed: 2
+
+#net, net_param, train_net, train_net_param
+train_net: "train_example.prototxt"
+
+test_iter: 100
+test_interval: 100
+
+test_net: "train_example.prototxt"
+
+display:10
+
+debug_info: 1
+
+snapshot: 10
+
+test_compute_loss: 1
+
+snapshot_format: BINARYPROTO
+
+snapshot_prefix: "net"
+
+type: "SGD"
+
+max_iter: 100
+
+lr_policy: "fixed"
+base_lr: 0.01
+
+# Does not include every parameter. See Doc

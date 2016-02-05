@@ -1,0 +1,17 @@
+name: "powerLayer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "power"
+  name: "power"
+  type: "Power"
+  power_param{
+    scale : 1
+    shift: 2
+    power: 2
+	}
+}

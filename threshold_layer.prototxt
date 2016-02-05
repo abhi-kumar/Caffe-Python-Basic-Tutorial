@@ -1,0 +1,15 @@
+name: "VGG_ILSVRC_16_layer"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 360
+input_dim: 480
+layer {
+  bottom: "data"
+  top: "threshold"
+  name: "threshold"
+  type: "Threshold"
+  threshold_param{
+		threshold: 128
+	}
+}
