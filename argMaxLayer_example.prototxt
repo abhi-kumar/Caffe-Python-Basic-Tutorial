@@ -1,0 +1,15 @@
+name: "argMaxLayer_example"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 600
+input_dim: 800
+layer {
+  bottom: "data"
+  top: "arg_max"
+  name: "arg_max"
+  type: "ArgMax"
+  argmax_param{
+     top_k: 1
+  }
+}
