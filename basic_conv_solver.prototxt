@@ -1,0 +1,27 @@
+train_net: "hingelossLayer_example.prototxt"
+test_net: "hingelossLayer_example.prototxt"
+
+test_iter: 10
+test_interval: 1
+
+type: "SGD"
+base_lr: 0.01
+momentum: 0.9
+weight_decay: 0.0005
+lr_policy: "inv"
+gamma: 0.0001
+power: 0.75
+average_loss: 1
+random_seed: 2
+
+display: 1
+
+max_iter: 2
+
+snapshot: 1
+snapshot_prefix: "net"
+
+
+
+debug_info: 1
+test_compute_loss: 1
