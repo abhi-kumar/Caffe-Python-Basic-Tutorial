@@ -1,0 +1,12 @@
+name: "absValLayer_example"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 320
+input_dim: 600
+layer {
+  bottom: "data"
+  top: "abs_val"
+  name: "abs_val"
+  type: "AbsVal"
+}
